@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %} | Extract </title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="logo"><a href="{{url_for('login')}}"><img src="{{url_for('static', filename='extractor.jpeg') }}" /></a></li>
+                <li><a class="button" href="#">Credit Info</a></li>
+                <li><a class="button" href="#">My Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class = "main">
+        {% block body %} {% endblock %}
+    </main>
+</body>
+</html>
