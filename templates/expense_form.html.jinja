@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %} Expense {% endblock %}
+{% block body %}
+<div class = 'expense-container'>
+    <form class="form form-container" method="post">
+        <p class="heading">Expense Form</p>
+        <input class="input" name="expense_detail" placeholder="Expense Detail" type="text">
+        <select class="input" name="category">
+            <option value="" selected>-- Expense Category--</option>
+            <option value="mithai">Mithai</option>
+            <option value="gutka-daru">Gutka Daru</option>
+            <option value="room">Room</option>
+            <option value="personal">Personal</option>
+            <option value="other">Other</option>
+        </select>
+        <input class="input" name="amount" placeholder="Amount" type="number"> 
+        <input class="input" name="date" placeholder="Incurred Date" type="date"> 
+        <button class="btn">Submit</button>
+    </form>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Expense Detail</th>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                </tr>
+            </thead>           
+            <tbody>
+                {% for user, expense in expenses.items() %}
+                <tr>
+                    <td>{{ expense["id"] }}</td>
+                    <td>{{ expense["expense_detail"] }}</td>
+                    <td>{{ expense["category"] }}</td>
+                    <td>{{ expense["amount"] }}</td>
+                    <td>{{ expense["date"] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

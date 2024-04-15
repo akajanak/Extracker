@@ -1,0 +1,124 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo a {
+    display: inline-block;
+  }
+  
+  .logo img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin-left: 1rem;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .button {
+    --bg: #000;
+    --hover-bg: #d6c1ff;
+    --hover-text: #000;
+    cursor: pointer;
+    border: 1px solid var(--bg);
+    border-radius: 8px;
+    padding: 0.8em 2em;
+    background: var(--bg);
+    transition: 0.2s;
+  }
+  
+  .button:hover {
+    color: var(--hover-text);
+    transform: translate(-0.25rem, -0.25rem);
+    background: var(--hover-bg);
+    box-shadow: 0.25rem 0.25rem var(--bg);
+  }
+  
+  .button:active {
+    transform: translate(0);
+    box-shadow: none;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 12rem auto;
+    width: 40rem;
+    background-color: white;
+    padding: 2.5em;
+    border-radius: 25px;
+    transition: 0.2s ease-in-out;
+    background: #d6c1ff;
+    box-shadow: -10px -10px 32px #a797c7, 10px 10px 32px #ffebff;
+  }
+  
+  .form:hover {
+    transform: translateX(-0.5em) translateY(-0.5em);
+    border: 1px solid #171717;
+    box-shadow: 10px 10px 0px #666666;
+  }
+  
+  .heading {
+    color: black;
+    padding-bottom: 2em;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .input {
+    border-radius: 15px;
+    border: 1px solid whitesmoke;
+    background-color: whitesmoke;
+    outline: none;
+    padding: 0.7em;
+    transition: 0.4s ease-in-out;
+  }
+  
+  .input:hover {
+    box-shadow: 6px 6px 0px #969696, -3px -3px 10px #ffffff;
+  }
+  
+  .input:focus {
+    background: #ffffff;
+    box-shadow: inherit 2px 5px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .form .btn {
+    margin-top: 2em;
+    align-self: center;
+    padding: 0.7em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 10px;
+    border: none;
+    color: black;
+    transition: 0.4s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 1px;
+  }
+  
+  .form .btn:hover {
+    box-shadow: 6px 6px 0px #969696, -3px -3px 10px #ffffff;
+    transform: translateX(-0.5em) translateY(-0.5em);
+  }
+  
+  .form .btn:active {
+    transition: 0.2s;
+    transform: translateX(0em) translateY(0em);
+    box-shadow: none;
+  }
