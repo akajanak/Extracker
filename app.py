@@ -5,17 +5,6 @@ from flask import Flask, redirect, render_template, url_for, request
     
 app = Flask(__name__)
 
-admins = {
-    'x' : {
-        'name' : 'admin',
-        'password' : 'admin'
-    },
-    'y' : {
-        'name' : 'john',
-        'password' : 'john'
-    }
-}
-
 expenses = OrderedDict({
     'borak' : {
         'id' : 3,
